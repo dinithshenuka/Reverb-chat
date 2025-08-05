@@ -14,23 +14,20 @@ class GotMessage implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * Create a new event instance.
-     */
     public function __construct(public array $message)
     {
         //
     }
 
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return array<int, \Illuminate\Broadcasting\Channel>
-     */
-    public function broadcastOn(): array
+    public function broadcastOn(): PrivateChannel
     {
-        return [
-            new PrivateChannel('channel-for-everyone'),
-        ];
+        // Only the intended receiver will get the message
+        return new PrivateChannel('chat.' . $this->message['receiver_id']);
+    }
+
+    // Optional: control the payload sent to the frontend
+    public function broadcastWith(): array
+    {
+        return $this->message;
     }
 }
