@@ -123,17 +123,4 @@ Pull requests are welcome! For major changes, please open an issue first.
 
 ---
 
-
-   ```bash
-   npm run dev
-   ```
-
-7. **Start the Development Server**
-
-   ```bash
-   php artisan serve
-   ```
-
-   The application will be available at http://localhost:8000.
-
 [MIT](LICENSE)
