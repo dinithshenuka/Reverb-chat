@@ -1,5 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 # Reverb Chat
 
 A real-time chat application built with Laravel, Livewire, and Laravel Reverb.  
@@ -43,7 +41,7 @@ npm install
 cp .env.example .env
 ```
 - Set your database credentials.
-- Set the following for Reverb (already present in your `.env`):
+- Set the following for Reverb:
     ```
     BROADCAST_DRIVER=reverb
 
@@ -101,7 +99,7 @@ php artisan serve
 ## Usage
 
 - Register and log in.
-- Navigate to the Chat page (e.g., `/communication`).
+- Navigate to the Chat page.
 - Start chatting in real time!
 
 ---
@@ -125,6 +123,17 @@ Pull requests are welcome! For major changes, please open an issue first.
 
 ---
 
-## License
+
+   ```bash
+   npm run dev
+   ```
+
+7. **Start the Development Server**
+
+   ```bash
+   php artisan serve
+   ```
+
+   The application will be available at http://localhost:8000.
 
 [MIT](LICENSE)
